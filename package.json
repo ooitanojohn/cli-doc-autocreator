@@ -2,11 +2,15 @@
   "name": "cli-doc-autocreater",
   "version": "1.0.0",
   "description": "cliのhelpを自動生成するライブラリです。",
-  "main": "cli.js",
+  "main": "cli-doc-create.js",
   "scripts": {
-    "cli-doc-create": "node cli.js"
+    "cli-doc-create": "node bincli-doc-create.js",
+    "prettier": "prettier --help"
   },
   "type": "module",
   "author": "ooitanojohn",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "2.8.8"
+  }
 }

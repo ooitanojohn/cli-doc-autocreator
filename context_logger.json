@@ -1,0 +1,7 @@
+{
+  logLevel: 'log',
+  warn: [Function (anonymous)],
+  error: [Function (anonymous)],
+  debug: [Function (anonymous)],
+  log: [Function (anonymous)]
+}

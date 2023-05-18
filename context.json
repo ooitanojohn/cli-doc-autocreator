@@ -1,0 +1,1833 @@
+Context2 {
+  rawArguments: [ '--help' ],
+  logger: {
+    logLevel: 'log',
+    warn: [Function (anonymous)],
+    error: [Function (anonymous)],
+    debug: [Function (anonymous)],
+    log: [Function (anonymous)]
+  },
+  stack: [
+    {
+      supportOptions: [Array],
+      detailedOptions: [Array],
+      detailedOptionMap: [Object],
+      apiDefaultOptions: [Object],
+      languages: [Array]
+    }
+  ],
+  supportOptions: [
+    {
+      name: 'arrowParens',
+      since: '1.9.0',
+      category: 'JavaScript',
+      type: 'choice',
+      default: 'always',
+      description: 'Include parentheses around a sole arrow function parameter.',
+      choices: [Array],
+      pluginDefaults: {}
+    },
+    {
+      name: 'bracketSameLine',
+      since: '2.4.0',
+      category: 'Common',
+      type: 'boolean',
+      default: false,
+      description: 'Put > of opening tags on the last line instead of on a new line.',
+      pluginDefaults: {}
+    },
+    {
+      name: 'bracketSpacing',
+      since: '0.0.0',
+      category: 'Common',
+      type: 'boolean',
+      default: true,
+      description: 'Print spaces between brackets.',
+      oppositeDescription: 'Do not print spaces between brackets.',
+      pluginDefaults: {}
+    },
+    {
+      name: 'cursorOffset',
+      since: '1.4.0',
+      category: 'Special',
+      type: 'int',
+      default: -1,
+      range: [Object],
+      description: 'Print (to stderr) where a cursor at the given position would move to after formatting.\n' +
+        'This option cannot be used with --range-start and --range-end.',
+      cliCategory: 'Editor',
+      pluginDefaults: {}
+    },
+    {
+      name: 'embeddedLanguageFormatting',
+      since: '2.1.0',
+      category: 'Global',
+      type: 'choice',
+      default: 'auto',
+      description: 'Control how Prettier formats quoted code embedded in the file.',
+      choices: [Array],
+      pluginDefaults: {}
+    },
+    {
+      name: 'endOfLine',
+      since: '1.15.0',
+      category: 'Global',
+      type: 'choice',
+      default: 'lf',
+      description: 'Which end of line characters to apply.',
+      choices: [Array],
+      pluginDefaults: {}
+    },
+    {
+      name: 'filepath',
+      since: '1.4.0',
+      category: 'Special',
+      type: 'path',
+      description: 'Specify the input filepath. This will be used to do parser inference.',
+      cliName: 'stdin-filepath',
+      cliCategory: 'Other',
+      cliDescription: 'Path to the file to pretend that stdin comes from.',
+      pluginDefaults: {}
+    },
+    {
+      name: 'htmlWhitespaceSensitivity',
+      since: '1.15.0',
+      category: 'HTML',
+      type: 'choice',
+      default: 'css',
+      description: 'How to handle whitespaces in HTML.',
+      choices: [Array],
+      pluginDefaults: {}
+    },
+    {
+      name: 'insertPragma',
+      since: '1.8.0',
+      category: 'Special',
+      type: 'boolean',
+      default: false,
+      description: "Insert @format pragma into file's first docblock comment.",
+      cliCategory: 'Other',
+      pluginDefaults: {}
+    },
+    {
+      name: 'jsxBracketSameLine',
+      since: '0.17.0',
+      category: 'JavaScript',
+      type: 'boolean',
+      description: 'Put > on the last line instead of at a new line.',
+      deprecated: '2.4.0',
+      pluginDefaults: {}
+    },
+    {
+      name: 'jsxSingleQuote',
+      since: '1.15.0',
+      category: 'JavaScript',
+      type: 'boolean',
+      default: false,
+      description: 'Use single quotes in JSX.',
+      pluginDefaults: {}
+    },
+    {
+      name: 'parser',
+      since: '0.0.10',
+      category: 'Global',
+      type: 'choice',
+      default: undefined,
+      description: 'Which parser to use.',
+      exception: [Function: exception],
+      choices: [Array],
+      pluginDefaults: {}
+    },
+    {
+      name: 'pluginSearchDirs',
+      since: '1.13.0',
+      type: 'path',
+      array: true,
+      default: [],
+      category: 'Global',
+      description: 'Custom directory that contains prettier plugins in node_modules subdirectory.\n' +
+        'Overrides default behavior when plugins are searched relatively to the location of Prettier.\n' +
+        'Multiple values are accepted.',
+      exception: [Function: exception],
+      cliName: 'plugin-search-dir',
+      cliCategory: 'Config',
+      pluginDefaults: {}
+    },
+    {
+      name: 'plugins',
+      since: '1.10.0',
+      type: 'path',
+      array: true,
+      default: [],
+      category: 'Global',
+      description: 'Add a plugin. Multiple plugins can be passed as separate `--plugin`s.',
+      exception: [Function: exception],
+      cliName: 'plugin',
+      cliCategory: 'Config',
+      pluginDefaults: {}
+    },
+    {
+      name: 'printWidth',
+      since: '0.0.0',
+      category: 'Global',
+      type: 'int',
+      default: 80,
+      description: 'The line length where Prettier will try wrap.',
+      range: [Object],
+      pluginDefaults: {}
+    },
+    {
+      name: 'proseWrap',
+      since: '1.8.2',
+      category: 'Common',
+      type: 'choice',
+      default: 'preserve',
+      description: 'How to wrap prose.',
+      choices: [Array],
+      pluginDefaults: {}
+    },
+    {
+      name: 'quoteProps',
+      since: '1.17.0',
+      category: 'JavaScript',
+      type: 'choice',
+      default: 'as-needed',
+      description: 'Change when properties in objects are quoted.',
+      choices: [Array],
+      pluginDefaults: {}
+    },
+    {
+      name: 'rangeEnd',
+      since: '1.4.0',
+      category: 'Special',
+      type: 'int',
+      default: Infinity,
+      range: [Object],
+      description: 'Format code ending at a given character offset (exclusive).\n' +
+        'The range will extend forwards to the end of the selected statement.\n' +
+        'This option cannot be used with --cursor-offset.',
+      cliCategory: 'Editor',
+      pluginDefaults: {}
+    },
+    {
+      name: 'rangeStart',
+      since: '1.4.0',
+      category: 'Special',
+      type: 'int',
+      default: 0,
+      range: [Object],
+      description: 'Format code starting at a given character offset.\n' +
+        'The range will extend backwards to the start of the first line containing the selected statement.\n' +
+        'This option cannot be used with --cursor-offset.',
+      cliCategory: 'Editor',
+      pluginDefaults: {}
+    },
+    {
+      name: 'requirePragma',
+      since: '1.7.0',
+      category: 'Special',
+      type: 'boolean',
+      default: false,
+      description: "Require either '@prettier' or '@format' to be present in the file's first docblock comment\n" +
+        'in order for it to be formatted.',
+      cliCategory: 'Other',
+      pluginDefaults: {}
+    },
+    {
+      name: 'semi',
+      since: '1.0.0',
+      category: 'JavaScript',
+      type: 'boolean',
+      default: true,
+      description: 'Print semicolons.',
+      oppositeDescription: 'Do not print semicolons, except at the beginning of lines which may need them.',
+      pluginDefaults: {}
+    },
+    {
+      name: 'singleAttributePerLine',
+      since: '2.6.0',
+      category: 'Common',
+      type: 'boolean',
+      default: false,
+      description: 'Enforce single attribute per line in HTML, Vue and JSX.',
+      pluginDefaults: {}
+    },
+    {
+      name: 'singleQuote',
+      since: '0.0.0',
+      category: 'Common',
+      type: 'boolean',
+      default: false,
+      description: 'Use single quotes instead of double quotes.',
+      pluginDefaults: {}
+    },
+    {
+      name: 'tabWidth',
+      type: 'int',
+      category: 'Global',
+      default: 2,
+      description: 'Number of spaces per indentation level.',
+      range: [Object],
+      pluginDefaults: {}
+    },
+    {
+      name: 'trailingComma',
+      since: '0.0.0',
+      category: 'JavaScript',
+      type: 'choice',
+      default: 'es5',
+      description: 'Print trailing commas wherever possible when multi-line.',
+      choices: [Array],
+      pluginDefaults: {}
+    },
+    {
+      name: 'useTabs',
+      since: '1.0.0',
+      category: 'Global',
+      type: 'boolean',
+      default: false,
+      description: 'Indent with tabs instead of spaces.',
+      pluginDefaults: {}
+    },
+    {
+      name: 'vueIndentScriptAndStyle',
+      since: '1.19.0',
+      category: 'HTML',
+      type: 'boolean',
+      default: false,
+      description: 'Indent script and style tags in Vue files.',
+      pluginDefaults: {}
+    }
+  ],
+  detailedOptions: [
+    {
+      name: 'arrow-parens',
+      category: 'Format',
+      since: '1.9.0',
+      type: 'choice',
+      default: 'always',
+      description: 'Include parentheses around a sole arrow function parameter.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'arrowParens'
+    },
+    {
+      name: 'bracket-same-line',
+      category: 'Format',
+      since: '2.4.0',
+      type: 'boolean',
+      default: false,
+      description: 'Put > of opening tags on the last line instead of on a new line.',
+      pluginDefaults: {},
+      forwardToApi: 'bracketSameLine',
+      choices: undefined
+    },
+    {
+      name: 'bracket-spacing',
+      category: 'Format',
+      since: '0.0.0',
+      type: 'boolean',
+      default: true,
+      description: 'Print spaces between brackets.',
+      oppositeDescription: 'Do not print spaces between brackets.',
+      pluginDefaults: {},
+      forwardToApi: 'bracketSpacing',
+      choices: undefined
+    },
+    {
+      name: 'cache',
+      category: 'Other',
+      default: false,
+      description: 'Only format changed files. Cannot use with --stdin-filepath.',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'cache-location',
+      category: 'Other',
+      description: 'Path to the cache file.',
+      type: 'path',
+      choices: undefined
+    },
+    {
+      name: 'cache-strategy',
+      category: 'Other',
+      choices: [Array],
+      description: 'Strategy for the cache to use for detecting changed files.',
+      type: 'choice'
+    },
+    {
+      name: 'check',
+      category: 'Output',
+      alias: 'c',
+      description: 'Check if the given files are formatted, print a human-friendly summary\n' +
+        'message and paths to unformatted files (see also --list-different).',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'color',
+      category: 'Other',
+      default: true,
+      description: 'Colorize error messages.',
+      oppositeDescription: 'Do not colorize error messages.',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'config',
+      category: 'Config',
+      description: 'Path to a Prettier configuration file (.prettierrc, package.json, prettier.config.js).',
+      exception: [Function: exception],
+      oppositeDescription: 'Do not look for a configuration file.',
+      type: 'path',
+      choices: undefined
+    },
+    {
+      name: 'config-precedence',
+      category: 'Config',
+      choices: [Array],
+      default: 'cli-override',
+      description: 'Define in which order config files and CLI options should be evaluated.',
+      type: 'choice'
+    },
+    {
+      name: 'cursor-offset',
+      category: 'Editor',
+      since: '1.4.0',
+      type: 'int',
+      default: -1,
+      range: [Object],
+      description: 'Print (to stderr) where a cursor at the given position would move to after formatting.\n' +
+        'This option cannot be used with --range-start and --range-end.',
+      cliCategory: 'Editor',
+      pluginDefaults: {},
+      forwardToApi: 'cursorOffset',
+      choices: undefined
+    },
+    {
+      name: 'debug-benchmark',
+      category: 'Other',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'debug-check',
+      category: 'Other',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'debug-print-ast',
+      category: 'Other',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'debug-print-comments',
+      category: 'Other',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'debug-print-doc',
+      category: 'Other',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'debug-repeat',
+      category: 'Other',
+      default: 0,
+      type: 'int',
+      choices: undefined
+    },
+    {
+      name: 'editorconfig',
+      category: 'Config',
+      default: true,
+      description: 'Take .editorconfig into account when parsing configuration.',
+      oppositeDescription: "Don't take .editorconfig into account when parsing configuration.",
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'embedded-language-formatting',
+      category: 'Format',
+      since: '2.1.0',
+      type: 'choice',
+      default: 'auto',
+      description: 'Control how Prettier formats quoted code embedded in the file.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'embeddedLanguageFormatting'
+    },
+    {
+      name: 'end-of-line',
+      category: 'Format',
+      since: '1.15.0',
+      type: 'choice',
+      default: 'lf',
+      description: 'Which end of line characters to apply.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'endOfLine'
+    },
+    {
+      name: 'error-on-unmatched-pattern',
+      category: 'Other',
+      oppositeDescription: 'Prevent errors when pattern is unmatched.',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'file-info',
+      category: 'Other',
+      description: 'Extract the following info (as JSON) for a given file path. Reported fields:\n' +
+        '* ignored (boolean) - true if file path is filtered by --ignore-path\n' +
+        '* inferredParser (string | null) - name of parser inferred from file path',
+      type: 'path',
+      choices: undefined
+    },
+    {
+      name: 'find-config-path',
+      category: 'Config',
+      description: 'Find and print the path to a configuration file for the given input file.',
+      type: 'path',
+      choices: undefined
+    },
+    {
+      name: 'help',
+      category: 'Other',
+      alias: 'h',
+      description: 'Show CLI usage, or details about the given flag.\nExample: --help write',
+      exception: [Function: exception],
+      type: 'flag',
+      choices: undefined
+    },
+    {
+      name: 'html-whitespace-sensitivity',
+      category: 'Format',
+      since: '1.15.0',
+      type: 'choice',
+      default: 'css',
+      description: 'How to handle whitespaces in HTML.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'htmlWhitespaceSensitivity'
+    },
+    {
+      name: 'ignore-path',
+      category: 'Config',
+      default: '.prettierignore',
+      description: 'Path to a file with patterns describing files to ignore.',
+      type: 'path',
+      choices: undefined
+    },
+    {
+      name: 'ignore-unknown',
+      category: 'Other',
+      alias: 'u',
+      description: 'Ignore unknown files.',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'insert-pragma',
+      category: 'Other',
+      since: '1.8.0',
+      type: 'boolean',
+      default: false,
+      description: "Insert @format pragma into file's first docblock comment.",
+      cliCategory: 'Other',
+      pluginDefaults: {},
+      forwardToApi: 'insertPragma',
+      choices: undefined
+    },
+    {
+      name: 'jsx-bracket-same-line',
+      category: 'Format',
+      since: '0.17.0',
+      type: 'boolean',
+      deprecated: true,
+      pluginDefaults: {},
+      choices: undefined
+    },
+    {
+      name: 'jsx-single-quote',
+      category: 'Format',
+      since: '1.15.0',
+      type: 'boolean',
+      default: false,
+      description: 'Use single quotes in JSX.',
+      pluginDefaults: {},
+      forwardToApi: 'jsxSingleQuote',
+      choices: undefined
+    },
+    {
+      name: 'list-different',
+      category: 'Output',
+      alias: 'l',
+      description: "Print the names of files that are different from Prettier's formatting (see also --check).",
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'loglevel',
+      category: 'Other',
+      choices: [Array],
+      default: 'log',
+      description: 'What level of logs to report.',
+      type: 'choice'
+    },
+    {
+      name: 'parser',
+      category: 'Format',
+      since: '0.0.10',
+      type: 'choice',
+      default: undefined,
+      description: 'Which parser to use.',
+      exception: [Function: exception],
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'parser'
+    },
+    {
+      name: 'plugin',
+      category: 'Config',
+      since: '1.10.0',
+      type: 'path',
+      array: true,
+      default: [],
+      description: 'Add a plugin. Multiple plugins can be passed as separate `--plugin`s.',
+      exception: [Function: exception],
+      cliName: 'plugin',
+      cliCategory: 'Config',
+      pluginDefaults: {},
+      forwardToApi: 'plugins',
+      choices: undefined
+    },
+    {
+      name: 'plugin-search',
+      category: 'Other',
+      oppositeDescription: 'Disable plugin autoloading.',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'plugin-search-dir',
+      category: 'Config',
+      since: '1.13.0',
+      type: 'path',
+      array: true,
+      default: [],
+      description: 'Custom directory that contains prettier plugins in node_modules subdirectory.\n' +
+        'Overrides default behavior when plugins are searched relatively to the location of Prettier.\n' +
+        'Multiple values are accepted.',
+      exception: [Function: exception],
+      cliName: 'plugin-search-dir',
+      cliCategory: 'Config',
+      pluginDefaults: {},
+      forwardToApi: 'pluginSearchDirs',
+      choices: undefined
+    },
+    {
+      name: 'print-width',
+      category: 'Format',
+      since: '0.0.0',
+      type: 'int',
+      default: 80,
+      description: 'The line length where Prettier will try wrap.',
+      range: [Object],
+      pluginDefaults: {},
+      forwardToApi: 'printWidth',
+      choices: undefined
+    },
+    {
+      name: 'prose-wrap',
+      category: 'Format',
+      since: '1.8.2',
+      type: 'choice',
+      default: 'preserve',
+      description: 'How to wrap prose.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'proseWrap'
+    },
+    {
+      name: 'quote-props',
+      category: 'Format',
+      since: '1.17.0',
+      type: 'choice',
+      default: 'as-needed',
+      description: 'Change when properties in objects are quoted.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'quoteProps'
+    },
+    {
+      name: 'range-end',
+      category: 'Editor',
+      since: '1.4.0',
+      type: 'int',
+      default: Infinity,
+      range: [Object],
+      description: 'Format code ending at a given character offset (exclusive).\n' +
+        'The range will extend forwards to the end of the selected statement.\n' +
+        'This option cannot be used with --cursor-offset.',
+      cliCategory: 'Editor',
+      pluginDefaults: {},
+      forwardToApi: 'rangeEnd',
+      choices: undefined
+    },
+    {
+      name: 'range-start',
+      category: 'Editor',
+      since: '1.4.0',
+      type: 'int',
+      default: 0,
+      range: [Object],
+      description: 'Format code starting at a given character offset.\n' +
+        'The range will extend backwards to the start of the first line containing the selected statement.\n' +
+        'This option cannot be used with --cursor-offset.',
+      cliCategory: 'Editor',
+      pluginDefaults: {},
+      forwardToApi: 'rangeStart',
+      choices: undefined
+    },
+    {
+      name: 'require-pragma',
+      category: 'Other',
+      since: '1.7.0',
+      type: 'boolean',
+      default: false,
+      description: "Require either '@prettier' or '@format' to be present in the file's first docblock comment\n" +
+        'in order for it to be formatted.',
+      cliCategory: 'Other',
+      pluginDefaults: {},
+      forwardToApi: 'requirePragma',
+      choices: undefined
+    },
+    {
+      name: 'semi',
+      category: 'Format',
+      since: '1.0.0',
+      type: 'boolean',
+      default: true,
+      description: 'Print semicolons.',
+      oppositeDescription: 'Do not print semicolons, except at the beginning of lines which may need them.',
+      pluginDefaults: {},
+      forwardToApi: 'semi',
+      choices: undefined
+    },
+    {
+      name: 'single-attribute-per-line',
+      category: 'Format',
+      since: '2.6.0',
+      type: 'boolean',
+      default: false,
+      description: 'Enforce single attribute per line in HTML, Vue and JSX.',
+      pluginDefaults: {},
+      forwardToApi: 'singleAttributePerLine',
+      choices: undefined
+    },
+    {
+      name: 'single-quote',
+      category: 'Format',
+      since: '0.0.0',
+      type: 'boolean',
+      default: false,
+      description: 'Use single quotes instead of double quotes.',
+      pluginDefaults: {},
+      forwardToApi: 'singleQuote',
+      choices: undefined
+    },
+    {
+      name: 'stdin-filepath',
+      category: 'Other',
+      since: '1.4.0',
+      type: 'path',
+      description: 'Path to the file to pretend that stdin comes from.',
+      cliName: 'stdin-filepath',
+      cliCategory: 'Other',
+      cliDescription: 'Path to the file to pretend that stdin comes from.',
+      pluginDefaults: {},
+      forwardToApi: 'filepath',
+      choices: undefined
+    },
+    {
+      name: 'support-info',
+      category: 'Other',
+      description: 'Print support information as JSON.',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'tab-width',
+      category: 'Format',
+      type: 'int',
+      default: 2,
+      description: 'Number of spaces per indentation level.',
+      range: [Object],
+      pluginDefaults: {},
+      forwardToApi: 'tabWidth',
+      choices: undefined
+    },
+    {
+      name: 'trailing-comma',
+      category: 'Format',
+      since: '0.0.0',
+      type: 'choice',
+      default: 'es5',
+      description: 'Print trailing commas wherever possible when multi-line.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'trailingComma'
+    },
+    {
+      name: 'use-tabs',
+      category: 'Format',
+      since: '1.0.0',
+      type: 'boolean',
+      default: false,
+      description: 'Indent with tabs instead of spaces.',
+      pluginDefaults: {},
+      forwardToApi: 'useTabs',
+      choices: undefined
+    },
+    {
+      name: 'version',
+      category: 'Other',
+      alias: 'v',
+      description: 'Print Prettier version.',
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'vue-indent-script-and-style',
+      category: 'Format',
+      since: '1.19.0',
+      type: 'boolean',
+      default: false,
+      description: 'Indent script and style tags in Vue files.',
+      pluginDefaults: {},
+      forwardToApi: 'vueIndentScriptAndStyle',
+      choices: undefined
+    },
+    {
+      name: 'with-node-modules',
+      category: 'Config',
+      description: "Process files inside 'node_modules' directory.",
+      type: 'boolean',
+      choices: undefined
+    },
+    {
+      name: 'write',
+      category: 'Output',
+      alias: 'w',
+      description: 'Edit files in-place. (Beware!)',
+      type: 'boolean',
+      choices: undefined
+    }
+  ],
+  detailedOptionMap: {
+    'arrow-parens': {
+      category: 'Format',
+      name: 'arrow-parens',
+      since: '1.9.0',
+      type: 'choice',
+      default: 'always',
+      description: 'Include parentheses around a sole arrow function parameter.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'arrowParens'
+    },
+    'bracket-same-line': {
+      category: 'Format',
+      name: 'bracket-same-line',
+      since: '2.4.0',
+      type: 'boolean',
+      default: false,
+      description: 'Put > of opening tags on the last line instead of on a new line.',
+      pluginDefaults: {},
+      forwardToApi: 'bracketSameLine',
+      choices: undefined
+    },
+    'bracket-spacing': {
+      category: 'Format',
+      name: 'bracket-spacing',
+      since: '0.0.0',
+      type: 'boolean',
+      default: true,
+      description: 'Print spaces between brackets.',
+      oppositeDescription: 'Do not print spaces between brackets.',
+      pluginDefaults: {},
+      forwardToApi: 'bracketSpacing',
+      choices: undefined
+    },
+    cache: {
+      category: 'Other',
+      default: false,
+      description: 'Only format changed files. Cannot use with --stdin-filepath.',
+      type: 'boolean',
+      choices: undefined
+    },
+    'cache-location': {
+      category: 'Other',
+      description: 'Path to the cache file.',
+      type: 'path',
+      choices: undefined
+    },
+    'cache-strategy': {
+      category: 'Other',
+      choices: [Array],
+      description: 'Strategy for the cache to use for detecting changed files.',
+      type: 'choice'
+    },
+    check: {
+      category: 'Output',
+      alias: 'c',
+      description: 'Check if the given files are formatted, print a human-friendly summary\n' +
+        'message and paths to unformatted files (see also --list-different).',
+      type: 'boolean',
+      choices: undefined
+    },
+    color: {
+      category: 'Other',
+      default: true,
+      description: 'Colorize error messages.',
+      oppositeDescription: 'Do not colorize error messages.',
+      type: 'boolean',
+      choices: undefined
+    },
+    config: {
+      category: 'Config',
+      description: 'Path to a Prettier configuration file (.prettierrc, package.json, prettier.config.js).',
+      exception: [Function: exception],
+      oppositeDescription: 'Do not look for a configuration file.',
+      type: 'path',
+      choices: undefined
+    },
+    'config-precedence': {
+      category: 'Config',
+      choices: [Array],
+      default: 'cli-override',
+      description: 'Define in which order config files and CLI options should be evaluated.',
+      type: 'choice'
+    },
+    'cursor-offset': {
+      category: 'Editor',
+      name: 'cursor-offset',
+      since: '1.4.0',
+      type: 'int',
+      default: -1,
+      range: [Object],
+      description: 'Print (to stderr) where a cursor at the given position would move to after formatting.\n' +
+        'This option cannot be used with --range-start and --range-end.',
+      cliCategory: 'Editor',
+      pluginDefaults: {},
+      forwardToApi: 'cursorOffset',
+      choices: undefined
+    },
+    'debug-benchmark': { category: 'Other', type: 'boolean', choices: undefined },
+    'debug-check': { category: 'Other', type: 'boolean', choices: undefined },
+    'debug-print-ast': { category: 'Other', type: 'boolean', choices: undefined },
+    'debug-print-comments': { category: 'Other', type: 'boolean', choices: undefined },
+    'debug-print-doc': { category: 'Other', type: 'boolean', choices: undefined },
+    'debug-repeat': { category: 'Other', default: 0, type: 'int', choices: undefined },
+    editorconfig: {
+      category: 'Config',
+      default: true,
+      description: 'Take .editorconfig into account when parsing configuration.',
+      oppositeDescription: "Don't take .editorconfig into account when parsing configuration.",
+      type: 'boolean',
+      choices: undefined
+    },
+    'embedded-language-formatting': {
+      category: 'Format',
+      name: 'embedded-language-formatting',
+      since: '2.1.0',
+      type: 'choice',
+      default: 'auto',
+      description: 'Control how Prettier formats quoted code embedded in the file.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'embeddedLanguageFormatting'
+    },
+    'end-of-line': {
+      category: 'Format',
+      name: 'end-of-line',
+      since: '1.15.0',
+      type: 'choice',
+      default: 'lf',
+      description: 'Which end of line characters to apply.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'endOfLine'
+    },
+    'error-on-unmatched-pattern': {
+      category: 'Other',
+      oppositeDescription: 'Prevent errors when pattern is unmatched.',
+      type: 'boolean',
+      choices: undefined
+    },
+    'file-info': {
+      category: 'Other',
+      description: 'Extract the following info (as JSON) for a given file path. Reported fields:\n' +
+        '* ignored (boolean) - true if file path is filtered by --ignore-path\n' +
+        '* inferredParser (string | null) - name of parser inferred from file path',
+      type: 'path',
+      choices: undefined
+    },
+    'find-config-path': {
+      category: 'Config',
+      description: 'Find and print the path to a configuration file for the given input file.',
+      type: 'path',
+      choices: undefined
+    },
+    help: {
+      category: 'Other',
+      alias: 'h',
+      description: 'Show CLI usage, or details about the given flag.\nExample: --help write',
+      exception: [Function: exception],
+      type: 'flag',
+      choices: undefined
+    },
+    'html-whitespace-sensitivity': {
+      category: 'Format',
+      name: 'html-whitespace-sensitivity',
+      since: '1.15.0',
+      type: 'choice',
+      default: 'css',
+      description: 'How to handle whitespaces in HTML.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'htmlWhitespaceSensitivity'
+    },
+    'ignore-path': {
+      category: 'Config',
+      default: '.prettierignore',
+      description: 'Path to a file with patterns describing files to ignore.',
+      type: 'path',
+      choices: undefined
+    },
+    'ignore-unknown': {
+      category: 'Other',
+      alias: 'u',
+      description: 'Ignore unknown files.',
+      type: 'boolean',
+      choices: undefined
+    },
+    'insert-pragma': {
+      category: 'Other',
+      name: 'insert-pragma',
+      since: '1.8.0',
+      type: 'boolean',
+      default: false,
+      description: "Insert @format pragma into file's first docblock comment.",
+      cliCategory: 'Other',
+      pluginDefaults: {},
+      forwardToApi: 'insertPragma',
+      choices: undefined
+    },
+    'jsx-bracket-same-line': {
+      category: 'Format',
+      name: 'jsx-bracket-same-line',
+      since: '0.17.0',
+      type: 'boolean',
+      deprecated: true,
+      pluginDefaults: {},
+      choices: undefined
+    },
+    'jsx-single-quote': {
+      category: 'Format',
+      name: 'jsx-single-quote',
+      since: '1.15.0',
+      type: 'boolean',
+      default: false,
+      description: 'Use single quotes in JSX.',
+      pluginDefaults: {},
+      forwardToApi: 'jsxSingleQuote',
+      choices: undefined
+    },
+    'list-different': {
+      category: 'Output',
+      alias: 'l',
+      description: "Print the names of files that are different from Prettier's formatting (see also --check).",
+      type: 'boolean',
+      choices: undefined
+    },
+    loglevel: {
+      category: 'Other',
+      choices: [Array],
+      default: 'log',
+      description: 'What level of logs to report.',
+      type: 'choice'
+    },
+    parser: {
+      category: 'Format',
+      name: 'parser',
+      since: '0.0.10',
+      type: 'choice',
+      default: undefined,
+      description: 'Which parser to use.',
+      exception: [Function: exception],
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'parser'
+    },
+    plugin: {
+      category: 'Config',
+      name: 'plugin',
+      since: '1.10.0',
+      type: 'path',
+      array: true,
+      default: [],
+      description: 'Add a plugin. Multiple plugins can be passed as separate `--plugin`s.',
+      exception: [Function: exception],
+      cliName: 'plugin',
+      cliCategory: 'Config',
+      pluginDefaults: {},
+      forwardToApi: 'plugins',
+      choices: undefined
+    },
+    'plugin-search': {
+      category: 'Other',
+      oppositeDescription: 'Disable plugin autoloading.',
+      type: 'boolean',
+      choices: undefined
+    },
+    'plugin-search-dir': {
+      category: 'Config',
+      name: 'plugin-search-dir',
+      since: '1.13.0',
+      type: 'path',
+      array: true,
+      default: [],
+      description: 'Custom directory that contains prettier plugins in node_modules subdirectory.\n' +
+        'Overrides default behavior when plugins are searched relatively to the location of Prettier.\n' +
+        'Multiple values are accepted.',
+      exception: [Function: exception],
+      cliName: 'plugin-search-dir',
+      cliCategory: 'Config',
+      pluginDefaults: {},
+      forwardToApi: 'pluginSearchDirs',
+      choices: undefined
+    },
+    'print-width': {
+      category: 'Format',
+      name: 'print-width',
+      since: '0.0.0',
+      type: 'int',
+      default: 80,
+      description: 'The line length where Prettier will try wrap.',
+      range: [Object],
+      pluginDefaults: {},
+      forwardToApi: 'printWidth',
+      choices: undefined
+    },
+    'prose-wrap': {
+      category: 'Format',
+      name: 'prose-wrap',
+      since: '1.8.2',
+      type: 'choice',
+      default: 'preserve',
+      description: 'How to wrap prose.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'proseWrap'
+    },
+    'quote-props': {
+      category: 'Format',
+      name: 'quote-props',
+      since: '1.17.0',
+      type: 'choice',
+      default: 'as-needed',
+      description: 'Change when properties in objects are quoted.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'quoteProps'
+    },
+    'range-end': {
+      category: 'Editor',
+      name: 'range-end',
+      since: '1.4.0',
+      type: 'int',
+      default: Infinity,
+      range: [Object],
+      description: 'Format code ending at a given character offset (exclusive).\n' +
+        'The range will extend forwards to the end of the selected statement.\n' +
+        'This option cannot be used with --cursor-offset.',
+      cliCategory: 'Editor',
+      pluginDefaults: {},
+      forwardToApi: 'rangeEnd',
+      choices: undefined
+    },
+    'range-start': {
+      category: 'Editor',
+      name: 'range-start',
+      since: '1.4.0',
+      type: 'int',
+      default: 0,
+      range: [Object],
+      description: 'Format code starting at a given character offset.\n' +
+        'The range will extend backwards to the start of the first line containing the selected statement.\n' +
+        'This option cannot be used with --cursor-offset.',
+      cliCategory: 'Editor',
+      pluginDefaults: {},
+      forwardToApi: 'rangeStart',
+      choices: undefined
+    },
+    'require-pragma': {
+      category: 'Other',
+      name: 'require-pragma',
+      since: '1.7.0',
+      type: 'boolean',
+      default: false,
+      description: "Require either '@prettier' or '@format' to be present in the file's first docblock comment\n" +
+        'in order for it to be formatted.',
+      cliCategory: 'Other',
+      pluginDefaults: {},
+      forwardToApi: 'requirePragma',
+      choices: undefined
+    },
+    semi: {
+      category: 'Format',
+      name: 'semi',
+      since: '1.0.0',
+      type: 'boolean',
+      default: true,
+      description: 'Print semicolons.',
+      oppositeDescription: 'Do not print semicolons, except at the beginning of lines which may need them.',
+      pluginDefaults: {},
+      forwardToApi: 'semi',
+      choices: undefined
+    },
+    'single-attribute-per-line': {
+      category: 'Format',
+      name: 'single-attribute-per-line',
+      since: '2.6.0',
+      type: 'boolean',
+      default: false,
+      description: 'Enforce single attribute per line in HTML, Vue and JSX.',
+      pluginDefaults: {},
+      forwardToApi: 'singleAttributePerLine',
+      choices: undefined
+    },
+    'single-quote': {
+      category: 'Format',
+      name: 'single-quote',
+      since: '0.0.0',
+      type: 'boolean',
+      default: false,
+      description: 'Use single quotes instead of double quotes.',
+      pluginDefaults: {},
+      forwardToApi: 'singleQuote',
+      choices: undefined
+    },
+    'stdin-filepath': {
+      category: 'Other',
+      name: 'stdin-filepath',
+      since: '1.4.0',
+      type: 'path',
+      description: 'Path to the file to pretend that stdin comes from.',
+      cliName: 'stdin-filepath',
+      cliCategory: 'Other',
+      cliDescription: 'Path to the file to pretend that stdin comes from.',
+      pluginDefaults: {},
+      forwardToApi: 'filepath',
+      choices: undefined
+    },
+    'support-info': {
+      category: 'Other',
+      description: 'Print support information as JSON.',
+      type: 'boolean',
+      choices: undefined
+    },
+    'tab-width': {
+      category: 'Format',
+      name: 'tab-width',
+      type: 'int',
+      default: 2,
+      description: 'Number of spaces per indentation level.',
+      range: [Object],
+      pluginDefaults: {},
+      forwardToApi: 'tabWidth',
+      choices: undefined
+    },
+    'trailing-comma': {
+      category: 'Format',
+      name: 'trailing-comma',
+      since: '0.0.0',
+      type: 'choice',
+      default: 'es5',
+      description: 'Print trailing commas wherever possible when multi-line.',
+      choices: [Array],
+      pluginDefaults: {},
+      forwardToApi: 'trailingComma'
+    },
+    'use-tabs': {
+      category: 'Format',
+      name: 'use-tabs',
+      since: '1.0.0',
+      type: 'boolean',
+      default: false,
+      description: 'Indent with tabs instead of spaces.',
+      pluginDefaults: {},
+      forwardToApi: 'useTabs',
+      choices: undefined
+    },
+    version: {
+      category: 'Other',
+      alias: 'v',
+      description: 'Print Prettier version.',
+      type: 'boolean',
+      choices: undefined
+    },
+    'vue-indent-script-and-style': {
+      category: 'Format',
+      name: 'vue-indent-script-and-style',
+      since: '1.19.0',
+      type: 'boolean',
+      default: false,
+      description: 'Indent script and style tags in Vue files.',
+      pluginDefaults: {},
+      forwardToApi: 'vueIndentScriptAndStyle',
+      choices: undefined
+    },
+    'with-node-modules': {
+      category: 'Config',
+      description: "Process files inside 'node_modules' directory.",
+      type: 'boolean',
+      choices: undefined
+    },
+    write: {
+      category: 'Output',
+      alias: 'w',
+      description: 'Edit files in-place. (Beware!)',
+      type: 'boolean',
+      choices: undefined
+    }
+  },
+  apiDefaultOptions: {
+    astFormat: 'estree',
+    printer: {},
+    originalText: undefined,
+    locStart: null,
+    locEnd: null,
+    arrowParens: 'always',
+    bracketSameLine: false,
+    bracketSpacing: true,
+    cursorOffset: -1,
+    embeddedLanguageFormatting: 'auto',
+    endOfLine: 'lf',
+    filepath: undefined,
+    htmlWhitespaceSensitivity: 'css',
+    insertPragma: false,
+    jsxSingleQuote: false,
+    parser: undefined,
+    pluginSearchDirs: [],
+    plugins: [],
+    printWidth: 80,
+    proseWrap: 'preserve',
+    quoteProps: 'as-needed',
+    rangeEnd: Infinity,
+    rangeStart: 0,
+    requirePragma: false,
+    semi: true,
+    singleAttributePerLine: false,
+    singleQuote: false,
+    tabWidth: 2,
+    trailingComma: 'es5',
+    useTabs: false,
+    vueIndentScriptAndStyle: false
+  },
+  languages: [
+    {
+      linguistLanguageId: 183,
+      name: 'JavaScript',
+      type: 'programming',
+      tmScope: 'source.js',
+      aceMode: 'javascript',
+      codemirrorMode: 'javascript',
+      codemirrorMimeType: 'text/javascript',
+      color: '#f1e05a',
+      aliases: [Array],
+      extensions: [Array],
+      filenames: [Array],
+      interpreters: [Array],
+      since: '0.0.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 183,
+      name: 'Flow',
+      type: 'programming',
+      tmScope: 'source.js',
+      aceMode: 'javascript',
+      codemirrorMode: 'javascript',
+      codemirrorMimeType: 'text/javascript',
+      color: '#f1e05a',
+      aliases: [],
+      extensions: [Array],
+      filenames: [],
+      interpreters: [Array],
+      since: '0.0.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 183,
+      name: 'JSX',
+      type: 'programming',
+      tmScope: 'source.js.jsx',
+      aceMode: 'javascript',
+      codemirrorMode: 'jsx',
+      codemirrorMimeType: 'text/jsx',
+      color: undefined,
+      aliases: undefined,
+      extensions: [Array],
+      filenames: undefined,
+      interpreters: undefined,
+      since: '0.0.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array],
+      group: 'JavaScript'
+    },
+    {
+      linguistLanguageId: 378,
+      name: 'TypeScript',
+      type: 'programming',
+      color: '#3178c6',
+      aliases: [Array],
+      interpreters: [Array],
+      extensions: [Array],
+      tmScope: 'source.ts',
+      aceMode: 'typescript',
+      codemirrorMode: 'javascript',
+      codemirrorMimeType: 'application/typescript',
+      since: '1.4.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 94901924,
+      name: 'TSX',
+      type: 'programming',
+      color: '#3178c6',
+      group: 'TypeScript',
+      extensions: [Array],
+      tmScope: 'source.tsx',
+      aceMode: 'javascript',
+      codemirrorMode: 'jsx',
+      codemirrorMimeType: 'text/jsx',
+      since: '1.4.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 174,
+      name: 'JSON.stringify',
+      type: 'data',
+      color: '#292929',
+      tmScope: 'source.json',
+      aceMode: 'json',
+      codemirrorMode: 'javascript',
+      codemirrorMimeType: 'application/json',
+      aliases: [Array],
+      extensions: [Array],
+      filenames: [Array],
+      since: '1.13.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 174,
+      name: 'JSON',
+      type: 'data',
+      color: '#292929',
+      tmScope: 'source.json',
+      aceMode: 'json',
+      codemirrorMode: 'javascript',
+      codemirrorMimeType: 'application/json',
+      aliases: [Array],
+      extensions: [Array],
+      filenames: [Array],
+      since: '1.5.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 423,
+      name: 'JSON with Comments',
+      type: 'data',
+      color: '#292929',
+      group: 'JSON',
+      tmScope: 'source.js',
+      aceMode: 'javascript',
+      codemirrorMode: 'javascript',
+      codemirrorMimeType: 'text/javascript',
+      aliases: [Array],
+      extensions: [Array],
+      filenames: [Array],
+      since: '1.5.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 175,
+      name: 'JSON5',
+      type: 'data',
+      color: '#267CB9',
+      extensions: [Array],
+      tmScope: 'source.js',
+      aceMode: 'javascript',
+      codemirrorMode: 'javascript',
+      codemirrorMimeType: 'application/json',
+      since: '1.13.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 50,
+      name: 'CSS',
+      type: 'markup',
+      tmScope: 'source.css',
+      aceMode: 'css',
+      codemirrorMode: 'css',
+      codemirrorMimeType: 'text/css',
+      color: '#563d7c',
+      extensions: [Array],
+      since: '1.4.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 262764437,
+      name: 'PostCSS',
+      type: 'markup',
+      color: '#dc3a0c',
+      tmScope: 'source.postcss',
+      group: 'CSS',
+      extensions: [Array],
+      aceMode: 'text',
+      since: '1.4.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 198,
+      name: 'Less',
+      type: 'markup',
+      color: '#1d365d',
+      aliases: [Array],
+      extensions: [Array],
+      tmScope: 'source.css.less',
+      aceMode: 'less',
+      codemirrorMode: 'css',
+      codemirrorMimeType: 'text/css',
+      since: '1.4.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 329,
+      name: 'SCSS',
+      type: 'markup',
+      color: '#c6538c',
+      tmScope: 'source.css.scss',
+      aceMode: 'scss',
+      codemirrorMode: 'css',
+      codemirrorMimeType: 'text/x-scss',
+      extensions: [Array],
+      since: '1.4.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 155,
+      name: 'Handlebars',
+      type: 'markup',
+      color: '#f7931e',
+      aliases: [Array],
+      extensions: [Array],
+      tmScope: 'text.html.handlebars',
+      aceMode: 'handlebars',
+      since: '2.3.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 139,
+      name: 'GraphQL',
+      type: 'data',
+      color: '#e10098',
+      extensions: [Array],
+      tmScope: 'source.graphql',
+      aceMode: 'text',
+      since: '1.5.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 222,
+      name: 'Markdown',
+      type: 'prose',
+      color: '#083fa1',
+      aliases: [Array],
+      aceMode: 'markdown',
+      codemirrorMode: 'gfm',
+      codemirrorMimeType: 'text/x-gfm',
+      wrap: true,
+      extensions: [Array],
+      filenames: [Array],
+      tmScope: 'source.gfm',
+      since: '1.8.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 222,
+      name: 'MDX',
+      type: 'prose',
+      color: '#083fa1',
+      aliases: [Array],
+      aceMode: 'markdown',
+      codemirrorMode: 'gfm',
+      codemirrorMimeType: 'text/x-gfm',
+      wrap: true,
+      extensions: [Array],
+      filenames: [],
+      tmScope: 'source.gfm',
+      since: '1.15.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 146,
+      name: 'Angular',
+      type: 'markup',
+      tmScope: 'text.html.basic',
+      aceMode: 'html',
+      codemirrorMode: 'htmlmixed',
+      codemirrorMimeType: 'text/html',
+      color: '#e34c26',
+      aliases: [Array],
+      extensions: [Array],
+      since: '1.15.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array],
+      filenames: []
+    },
+    {
+      linguistLanguageId: 146,
+      name: 'HTML',
+      type: 'markup',
+      tmScope: 'text.html.basic',
+      aceMode: 'html',
+      codemirrorMode: 'htmlmixed',
+      codemirrorMimeType: 'text/html',
+      color: '#e34c26',
+      aliases: [Array],
+      extensions: [Array],
+      since: '1.15.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 146,
+      name: 'Lightning Web Components',
+      type: 'markup',
+      tmScope: 'text.html.basic',
+      aceMode: 'html',
+      codemirrorMode: 'htmlmixed',
+      codemirrorMimeType: 'text/html',
+      color: '#e34c26',
+      aliases: [Array],
+      extensions: [],
+      since: '1.17.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array],
+      filenames: []
+    },
+    {
+      linguistLanguageId: 391,
+      name: 'Vue',
+      type: 'markup',
+      color: '#41b883',
+      extensions: [Array],
+      tmScope: 'text.html.vue',
+      aceMode: 'html',
+      since: '1.10.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    },
+    {
+      linguistLanguageId: 407,
+      name: 'YAML',
+      type: 'data',
+      color: '#cb171e',
+      tmScope: 'source.yaml',
+      aliases: [Array],
+      extensions: [Array],
+      filenames: [Array],
+      aceMode: 'yaml',
+      codemirrorMode: 'yaml',
+      codemirrorMimeType: 'text/x-yaml',
+      since: '1.14.0',
+      parsers: [Array],
+      vscodeLanguageIds: [Array]
+    }
+  ],
+  argv: {
+    _: [],
+    cache: false,
+    color: true,
+    editorconfig: true,
+    help: '',
+    configPrecedence: 'cli-override',
+    debugRepeat: 0,
+    ignorePath: '.prettierignore',
+    loglevel: 'log',
+    plugins: [],
+    pluginSearchDirs: [],
+    __raw: {
+      _: [],
+      cache: false,
+      color: true,
+      editorconfig: true,
+      help: '',
+      'config-precedence': 'cli-override',
+      'debug-repeat': 0,
+      'ignore-path': '.prettierignore',
+      loglevel: 'log',
+      plugin: [],
+      'plugin-search-dir': []
+    }
+  },
+  filePatterns: []
+}
+Usage: prettier [options] [file/dir/glob ...]
+
+By default, output is written to stdout.
+Stdin is read if it is piped to Prettier and no files are given.
+
+Output options:
+
+  -c, --check              Check if the given files are formatted, print a human-friendly summary
+                           message and paths to unformatted files (see also --list-different).
+  -l, --list-different     Print the names of files that are different from Prettier's formatting (see also --check).
+  -w, --write              Edit files in-place. (Beware!)
+
+Format options:
+
+  --arrow-parens <always|avoid>
+                           Include parentheses around a sole arrow function parameter.
+                           Defaults to always.
+  --bracket-same-line      Put > of opening tags on the last line instead of on a new line.
+                           Defaults to false.
+  --no-bracket-spacing     Do not print spaces between brackets.
+  --embedded-language-formatting <auto|off>
+                           Control how Prettier formats quoted code embedded in the file.
+                           Defaults to auto.
+  --end-of-line <lf|crlf|cr|auto>
+                           Which end of line characters to apply.
+                           Defaults to lf.
+  --html-whitespace-sensitivity <css|strict|ignore>
+                           How to handle whitespaces in HTML.
+                           Defaults to css.
+  --jsx-single-quote       Use single quotes in JSX.
+                           Defaults to false.
+  --parser <flow|babel|babel-flow|babel-ts|typescript|acorn|espree|meriyah|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|glimmer|html|angular|lwc>
+                           Which parser to use.
+  --print-width <int>      The line length where Prettier will try wrap.
+                           Defaults to 80.
+  --prose-wrap <always|never|preserve>
+                           How to wrap prose.
+                           Defaults to preserve.
+  --quote-props <as-needed|consistent|preserve>
+                           Change when properties in objects are quoted.
+                           Defaults to as-needed.
+  --no-semi                Do not print semicolons, except at the beginning of lines which may need them.
+  --single-attribute-per-line
+                           Enforce single attribute per line in HTML, Vue and JSX.
+                           Defaults to false.
+  --single-quote           Use single quotes instead of double quotes.
+                           Defaults to false.
+  --tab-width <int>        Number of spaces per indentation level.
+                           Defaults to 2.
+  --trailing-comma <es5|none|all>
+                           Print trailing commas wherever possible when multi-line.
+                           Defaults to es5.
+  --use-tabs               Indent with tabs instead of spaces.
+                           Defaults to false.
+  --vue-indent-script-and-style
+                           Indent script and style tags in Vue files.
+                           Defaults to false.
+
+Config options:
+
+  --config <path>          Path to a Prettier configuration file (.prettierrc, package.json, prettier.config.js).
+  --no-config              Do not look for a configuration file.
+  --config-precedence <cli-override|file-override|prefer-file>
+                           Define in which order config files and CLI options should be evaluated.
+                           Defaults to cli-override.
+  --no-editorconfig        Don't take .editorconfig into account when parsing configuration.
+  --find-config-path <path>
+                           Find and print the path to a configuration file for the given input file.
+  --ignore-path <path>     Path to a file with patterns describing files to ignore.
+                           Defaults to .prettierignore.
+  --plugin <path>          Add a plugin. Multiple plugins can be passed as separate `--plugin`s.
+                           Defaults to [].
+  --plugin-search-dir <path>
+                           Custom directory that contains prettier plugins in node_modules subdirectory.
+                           Overrides default behavior when plugins are searched relatively to the location of Prettier.
+                           Multiple values are accepted.
+                           Defaults to [].
+  --with-node-modules      Process files inside 'node_modules' directory.
+
+Editor options:
+
+  --cursor-offset <int>    Print (to stderr) where a cursor at the given position would move to after formatting.
+                           This option cannot be used with --range-start and --range-end.
+                           Defaults to -1.
+  --range-end <int>        Format code ending at a given character offset (exclusive).
+                           The range will extend forwards to the end of the selected statement.
+                           This option cannot be used with --cursor-offset.
+                           Defaults to Infinity.
+  --range-start <int>      Format code starting at a given character offset.
+                           The range will extend backwards to the start of the first line containing the selected statement.
+                           This option cannot be used with --cursor-offset.
+                           Defaults to 0.
+
+Other options:
+
+  --cache                  Only format changed files. Cannot use with --stdin-filepath.
+                           Defaults to false.
+  --cache-location <path>  Path to the cache file.
+  --cache-strategy <metadata|content>
+                           Strategy for the cache to use for detecting changed files.
+  --no-color               Do not colorize error messages.
+  --no-error-on-unmatched-pattern
+                           Prevent errors when pattern is unmatched.
+  --file-info <path>       Extract the following info (as JSON) for a given file path. Reported fields:
+                           * ignored (boolean) - true if file path is filtered by --ignore-path
+                           * inferredParser (string | null) - name of parser inferred from file path
+  -h, --help <flag>        Show CLI usage, or details about the given flag.
+                           Example: --help write
+  -u, --ignore-unknown     Ignore unknown files.
+  --insert-pragma          Insert @format pragma into file's first docblock comment.
+                           Defaults to false.
+  --loglevel <silent|error|warn|log|debug>
+                           What level of logs to report.
+                           Defaults to log.
+  --no-plugin-search       Disable plugin autoloading.
+  --require-pragma         Require either '@prettier' or '@format' to be present in the file's first docblock comment
+                           in order for it to be formatted.
+                           Defaults to false.
+  --stdin-filepath <path>  Path to the file to pretend that stdin comes from.
+  --support-info           Print support information as JSON.
+  -v, --version            Print Prettier version.
+
+
