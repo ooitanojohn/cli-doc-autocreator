@@ -1,0 +1,12 @@
+{
+  "name": "cli-doc-autocreater",
+  "version": "1.0.0",
+  "description": "cliのhelpを自動生成するライブラリです。",
+  "main": "cli.js",
+  "scripts": {
+    "cli-doc-create": "node cli.js"
+  },
+  "type": "module",
+  "author": "ooitanojohn",
+  "license": "ISC"
+}
