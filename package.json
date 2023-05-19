@@ -5,12 +5,14 @@
   "main": "cli-doc-create.js",
   "scripts": {
     "cli-doc-create": "node bincli-doc-create.js",
-    "prettier": "prettier --help"
+    "prettier-h": "prettier --help",
+    "prettier-v": "prettier --version"
   },
   "type": "module",
   "author": "ooitanojohn",
   "license": "ISC",
   "devDependencies": {
+    "@mizchi/zero-runtime": "^0.0.1",
     "prettier": "2.8.8"
   }
 }
